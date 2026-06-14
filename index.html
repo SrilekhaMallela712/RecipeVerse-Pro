@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RecipeVerse Pro</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-circle"></div>
+
+            <h2>RecipeVerse Pro</h2>
+
+            <p>Loading delicious recipes...</p>
+
+        </div>
+
+    </div>
+
+    <!-- Floating Background -->
+
+    <div class="floating-bg">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <img src="images/icons/chef-hat.png" alt="Chef Hat">
+
+            <h1>RecipeVerse</h1>
+
+        </div>
+
+        <nav>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#recipes">Recipes</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button id="darkModeBtn" class="icon-btn">
+
+                <img src="images/icons/moon.png" alt="Dark Mode">
+
+            </button>
+
+            <button id="favoriteBtn" class="icon-btn">
+
+                <img src="images/icons/heart.png" alt="Favorites">
+
+        </div>
+
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero" id="home">
+
+        <img src="images/hero-banner.jpeg"
+            class="hero-image"
+            alt="Hero Banner">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+                Discover Amazing Recipes
+            </h1>
+
+            <p>
+
+                Explore delicious dishes from around the world,
+                learn step-by-step cooking instructions,
+                and enjoy an interactive cooking experience.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="primary-btn"
+                    onclick="scrollToRecipes()">
+
+                    Explore Recipes
+
+                </button>
+
+                <button class="secondary-btn"
+                    onclick="openRandomRecipe()">
+
+                    Surprise Me
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+
+    <section class="stats-section">
+
+        <div class="stat-card">
+
+            <h2 id="recipeCount">
+                39+
+            </h2>
+
+            <p>Recipes</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>7</h2>
+
+            <p>Categories</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>100%</h2>
+
+            <p>Responsive</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>∞</h2>
+
+            <p>Future Ready</p>
+
+        </div>
+
+    </section>
+
+    <!-- Search -->
+
+    <section class="search-section">
+
+        <h2>Find Your Favorite Recipe</h2>
+
+        <p>
+            Search from all available recipes instantly.
+        </p>
+
+        <div class="search-box">
+
+            <img src="images/icons/search.png"
+                alt="Search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search recipes...">
+
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+
+    <section class="categories-section">
+
+        <button class="category-btn active"
+            data-category="all">
+
+            All
+
+        </button>
+
+        <button class="category-btn"
+            data-category="indian">
+
+            Indian
+
+        </button>
+
+        <button class="category-btn"
+            data-category="italian">
+
+            Italian
+
+        </button>
+
+        <button class="category-btn"
+            data-category="dessert">
+
+            Dessert
+
+        </button>
+
+        <button class="category-btn"
+            data-category="drinks">
+
+            Drinks
+
+        </button>
+
+        <button class="category-btn"
+            data-category="asian">
+
+            Asian
+
+        </button>
+
+        <button class="category-btn"
+            data-category="fastfood">
+
+            Fast Food
+
+        </button>
+
+    </section>
+
+    <!-- Recipes Section -->
+
+    <section
+        id="recipes"
+        class="recipes-section">
+
+        <div class="section-title">
+
+            <h2>
+                Popular Recipes
+            </h2>
+
+            <p>
+
+                Click any recipe card to view details,
+                ingredients, cooking steps and timer.
+
+            </p>
+
+        </div>
+
+        <!-- Dynamic Recipe Grid -->
+
+        <div id="recipeGrid"
+            class="recipe-grid">
+
+        </div>
+
+    </section>
+        <!-- Recipe Modal -->
+
+    <div id="recipeModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close-btn" id="closeModal">
+                &times;
+            </span>
+
+            <div class="modal-header">
+
+                <img id="modalImage"
+                    src=""
+                    alt="Recipe Image">
+
+                <div class="modal-info">
+
+                    <h2 id="modalTitle">
+                        Recipe Name
+                    </h2>
+
+                    <div class="recipe-details">
+
+                        <div class="detail-box">
+
+                            <img src="images/icons/clock.png"
+                                alt="Clock">
+
+                            <span id="modalPrepTime">
+                                30 min
+                            </span>
+
+                        </div>
+
+                        <div class="detail-box">
+
+                            <img src="images/icons/serving.png"
+                                alt="Serving">
+
+                            <span id="modalServings">
+                                4 Servings
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Action Buttons -->
+
+            <div class="modal-actions">
+
+                <button id="toggleIngredients"
+                    class="action-btn">
+
+                    Show Ingredients
+
+                </button>
+
+                <button id="toggleSteps"
+                    class="action-btn">
+
+                    Show Steps
+
+                </button>
+
+                <button id="printRecipe"
+                    class="action-btn">
+
+                    <img src="images/icons/print.png"
+                        alt="Print">
+
+                    Print Recipe
+
+                </button>
+
+            </div>
+
+            <!-- Ingredients -->
+
+            <div id="ingredientsContainer"
+                class="content-box hidden">
+
+                <h3>Ingredients</h3>
+
+                <ul id="ingredientsList">
+
+                </ul>
+
+            </div>
+
+            <!-- Steps -->
+
+            <div id="stepsContainer"
+                class="content-box hidden">
+
+                <h3>Instructions</h3>
+
+                <ol id="stepsList">
+
+                </ol>
+
+            </div>
+
+            <!-- Cooking Mode -->
+
+            <div class="cooking-section">
+
+                <h3>
+                    Interactive Cooking Mode
+                </h3>
+
+                <div class="cooking-controls">
+
+                    <button id="startCooking"
+                        class="cook-btn">
+
+                        Start Cooking
+
+                    </button>
+
+                    <button id="nextStep"
+                        class="cook-btn">
+
+                        Next Step
+
+                    </button>
+
+                </div>
+
+                <!-- Progress Bar -->
+
+                <div class="progress-wrapper">
+
+                    <div class="progress-bar">
+
+                        <div id="progressFill">
+
+                        </div>
+
+                    </div>
+
+                    <span id="progressText">
+                        0%
+                    </span>
+
+                </div>
+
+                <div id="currentStepDisplay">
+
+                    Click Start Cooking
+
+                </div>
+
+            </div>
+
+            <!-- Timer -->
+
+            <div class="timer-section">
+
+                <h3>
+
+                    <img src="images/icons/timer.png"
+                        alt="Timer">
+
+                    Cooking Timer
+
+                </h3>
+
+                <div id="timerDisplay">
+
+                    00:00
+
+                </div>
+
+                <div class="timer-buttons">
+
+                    <button id="startTimer">
+
+                        Start
+
+                    </button>
+
+                    <button id="pauseTimer">
+
+                        Pause
+
+                    </button>
+
+                    <button id="resetTimer">
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Favorites Drawer -->
+
+    <div id="favoritesDrawer">
+
+        <div class="favorites-header">
+
+            <h2>
+
+                <img src="images/icons/heart.png"
+                    alt="Heart">
+
+                Favorite Recipes
+
+            </h2>
+
+            <button id="closeFavorites">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <div id="favoritesList">
+
+        </div>
+
+    </div>
+
+    <!-- About Section -->
+
+    <section id="about"
+        class="about-section">
+
+        <div class="about-content">
+
+            <h2>
+                About RecipeVerse
+            </h2>
+
+            <p>
+
+                RecipeVerse is a modern interactive recipe
+                platform designed to make cooking fun,
+                engaging and easy.
+
+            </p>
+
+            <p>
+
+                Browse recipes, view ingredients,
+                follow step-by-step instructions,
+                use cooking timers and enjoy a
+                beautiful responsive experience.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>
+                RecipeVerse Pro
+            </h2>
+
+            <p>
+                Interactive Recipe Card Project
+            </p>
+
+            <p>
+                Built with HTML, CSS & JavaScript
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Back To Top -->
+
+    <button id="backToTop">
+
+        ↑
+
+    </button>
+
+    <!-- Script -->
+<script src="script.js"></script>
+
+</body>
+
+</html>
