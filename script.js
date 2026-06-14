@@ -24,7 +24,7 @@ const recipes = [
 
 {
     name: "Chocolate Cake",
-    image: "images/chocolate-cake.jpg",
+    image: "chocolate-cake.jpg",
     category: "dessert",
     prepTime: "45 min",
     servings: "8",
@@ -46,7 +46,7 @@ const recipes = [
 
 {
     name: "Cheesecake",
-    image: "images/cheesecake.jpg",
+    image: "cheesecake.jpg",
     category: "dessert",
     prepTime: "50 min",
     servings: "6",
@@ -67,7 +67,7 @@ const recipes = [
 
 {
     name: "Brownies",
-    image: "images/brownies.jpg",
+    image: "brownies.jpg",
     category: "dessert",
     prepTime: "35 min",
     servings: "9",
@@ -88,7 +88,7 @@ const recipes = [
 
 {
     name: "Pizza",
-    image: "images/pizza.jpg",
+    image: "pizza.jpg",
     category: "italian",
     prepTime: "30 min",
     servings: "4",
@@ -109,7 +109,7 @@ const recipes = [
 
 {
     name: "Burger",
-    image: "images/burger.jpg",
+    image: "burger.jpg",
     category: "fastfood",
     prepTime: "20 min",
     servings: "2",
@@ -130,7 +130,7 @@ const recipes = [
 
 {
     name: "Chicken Biryani",
-    image: "images/chicken-biryani.jpg",
+    image: "chicken-biryani.jpg",
     category: "indian",
     prepTime: "60 min",
     servings: "5",
@@ -151,7 +151,7 @@ const recipes = [
 
 {
     name: "Veg Biryani",
-    image: "images/veg-biryani.jpg",
+    image: "veg-biryani.jpg",
     category: "indian",
     prepTime: "45 min",
     servings: "4",
@@ -170,7 +170,7 @@ const recipes = [
 },
 {
     name: "Butter Chicken",
-    image: "images/butter-chicken.jpg",
+    image: "butter-chicken.jpg",
     category: "indian",
     prepTime: "40 min",
     servings: "4",
@@ -191,7 +191,7 @@ const recipes = [
 
 {
     name: "Dosa",
-    image: "images/dosa.jpg",
+    image: "dosa.jpg",
     category: "indian",
     prepTime: "25 min",
     servings: "3",
@@ -211,7 +211,7 @@ const recipes = [
 
 {
     name: "Idli",
-    image: "images/idli.jpg",
+    image: "idli.jpg",
     category: "indian",
     prepTime: "20 min",
     servings: "4",
@@ -229,7 +229,7 @@ const recipes = [
 
 {
     name: "Samosa",
-    image: "images/samosa.jpg",
+    image: "samosa.jpg",
     category: "indian",
     prepTime: "30 min",
     servings: "4",
@@ -249,7 +249,7 @@ const recipes = [
 
 {
     name: "Palak Paneer",
-    image: "images/palak-paneer.jpg",
+    image: "palak-paneer.jpg",
     category: "indian",
     prepTime: "35 min",
     servings: "4",
@@ -269,7 +269,7 @@ const recipes = [
 
 {
     name: "Pasta Red Sauce",
-    image: "images/pasta-red.jpg",
+    image: "pasta-red.jpg",
     category: "italian",
     prepTime: "25 min",
     servings: "3",
@@ -289,7 +289,7 @@ const recipes = [
 
 {
     name: "Pasta White Sauce",
-    image: "images/pasta-white.jpg",
+    image: "pasta-white.jpg",
     category: "italian",
     prepTime: "25 min",
     servings: "3",
@@ -309,7 +309,7 @@ const recipes = [
 
 {
     name: "Lasagna",
-    image: "images/lasagna.jpg",
+    image: "lasagna.jpg",
     category: "italian",
     prepTime: "50 min",
     servings: "6",
@@ -329,7 +329,7 @@ const recipes = [
 
 {
     name: "Noodles",
-    image: "images/noodles.jpg",
+    image: "noodles.jpg",
     category: "asian",
     prepTime: "20 min",
     servings: "2",
@@ -349,7 +349,7 @@ const recipes = [
 
 {
     name: "Fried Rice",
-    image: "images/fried-rice.jpg",
+    image: "fried-rice.jpg",
     category: "asian",
     prepTime: "20 min",
     servings: "3",
@@ -369,7 +369,7 @@ const recipes = [
 
 {
     name: "Ramen",
-    image: "images/ramen.jpg",
+    image: "ramen.jpg",
     category: "asian",
     prepTime: "30 min",
     servings: "2",
@@ -389,7 +389,7 @@ const recipes = [
 
 {
     name: "Sushi",
-    image: "images/sushi.jpg",
+    image: "sushi.jpg",
     category: "asian",
     prepTime: "45 min",
     servings: "4",
@@ -409,7 +409,7 @@ const recipes = [
 
 {
     name: "Pancakes",
-    image: "images/pancakes.jpg",
+    image: "pancakes.jpg",
     category: "dessert",
     prepTime: "20 min",
     servings: "3",
@@ -429,7 +429,7 @@ const recipes = [
 
 {
     name: "Donuts",
-    image: "images/donuts.jpg",
+    image: "donuts.jpg",
     category: "dessert",
     prepTime: "40 min",
     servings: "6",
@@ -449,7 +449,7 @@ const recipes = [
 
 {
     name: "Ice Cream",
-    image: "images/icecream.jpg",
+    image: "icecream.jpg",
     category: "dessert",
     prepTime: "15 min",
     servings: "4",
@@ -469,7 +469,7 @@ const recipes = [
 
 {
     name: "Cold Coffee",
-    image: "images/cold-coffee.jpg",
+    image: "cold-coffee.jpg",
     category: "drinks",
     prepTime: "10 min",
     servings: "2",
@@ -487,7 +487,7 @@ const recipes = [
 
 {
     name: "Mango Shake",
-    image: "images/mango-shake.jpg",
+    image: "mango-shake.jpg",
     category: "drinks",
     prepTime: "10 min",
     servings: "2",
@@ -505,7 +505,7 @@ const recipes = [
 
 {
     name: "Lemonade",
-    image: "images/lemonade.jpg",
+    image: "lemonade.jpg",
     category: "drinks",
     prepTime: "5 min",
     servings: "2",
